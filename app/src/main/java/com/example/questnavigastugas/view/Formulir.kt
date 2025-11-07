@@ -128,6 +128,24 @@ fun Formulir(navController: NavController) {
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text("ALAMAT", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Gray, modifier = Modifier.padding(bottom = 4.dp))
+            OutlinedTextField(
+                value = alamat,
+                onValueChange = { alamat = it },
+                label = { Text("Alamat") },
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(8.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = darkPurple,
+                    unfocusedBorderColor = Color.Black,
+                ),
+                keyboardOptions = KeyboardOptions.Default.copy(
+                    imeAction = ImeAction.Done
+                ),
+                singleLine = true
+            )
         }
     }
 }
