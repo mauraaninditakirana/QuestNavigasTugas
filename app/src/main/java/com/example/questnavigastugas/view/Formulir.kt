@@ -42,7 +42,25 @@ fun Formulir(navController: NavController) {
             .fillMaxSize()
             .background(backgroundColor)
             .padding(top = 53.dp)
-    ){}
+    ){
+        // Header
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(lightPurple)
+                .heightIn(min = 100.dp)
+                .padding(16.dp),
+            contentAlignment = Alignment.BottomStart
+        ) {
+            Text(
+                text = "Formulir Pendaftaran",
+                fontSize = 30.sp,
+                color = Color.White,
+                modifier = Modifier.padding(start = 10.dp)
+            )
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+    }
 }
 
 
