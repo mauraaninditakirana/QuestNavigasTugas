@@ -64,5 +64,47 @@ fun ListDaftar(navController: NavController) {
                 modifier = Modifier.padding(start = 10.dp)
             )
         }
+
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = stringResource(id = R.string.nama_lengkap),
+                value = "Park Jisung",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelPurple // Diubah menjadi ungu
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = stringResource(id = R.string.jenis_kelamin),
+                value = "Laki-laki",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelPurple
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = "STATUS PERKAWINAN",
+                value = "Lajang",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelPurple
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = stringResource(id = R.string.alamat),
+                value = "Korea",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelPurple
+            )
+            Spacer(modifier = Modifier.height(40.dp))
+
+        }
     }
 }
