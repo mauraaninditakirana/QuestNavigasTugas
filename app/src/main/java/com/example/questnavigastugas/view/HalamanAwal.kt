@@ -77,7 +77,8 @@ fun HalamanAwal(navController: NavController) {
             shape = RoundedCornerShape(25.dp), // Membuat tombol oval
             colors = ButtonDefaults.buttonColors(containerColor = buttonColor)
         ){
-
+            Text(text = "Submit", fontSize = 18.sp, color = Color.White)
         }
+        Spacer(modifier = Modifier.height(50.dp))
     }
 }
