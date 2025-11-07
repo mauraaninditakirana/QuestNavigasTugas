@@ -47,5 +47,24 @@ fun HalamanAwal(navController: NavController) {
             color = textColor,
             style = TextStyle(lineHeight = 56.sp)
         )
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Image(
+                // 2. Ganti R.drawable.logo_card_lst dengan nama file gambar Anda
+                painter = painterResource(id = R.drawable.foto2),
+                contentDescription = "Logo Aplikasi",
+                modifier = Modifier.size(280.dp)
+            )
+            Text(
+                text = "Maura Anindita Kirana\n20230140090",
+                fontSize = 23.sp,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Monospace,
+                textAlign = TextAlign.Center,
+                lineHeight = 24.sp
+            )
+        }
     }
 }
