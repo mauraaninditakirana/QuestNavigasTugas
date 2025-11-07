@@ -82,3 +82,9 @@ fun HalamanAwal(navController: NavController) {
         Spacer(modifier = Modifier.height(50.dp))
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun HalamanAwalPreview() {
+    com.example.questnavigastugas.view.HalamanAwal(navController = rememberNavController())
+}
