@@ -36,6 +36,13 @@ fun Formulir(navController: NavController) {
     val lightPurple = Color(0xFFDC26D3)
     val darkPurple = Color(0xFFD174D7)
     val backgroundColor = Color(0xFFF7F2FA)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(backgroundColor)
+            .padding(top = 53.dp)
+    ){}
 }
 
 
