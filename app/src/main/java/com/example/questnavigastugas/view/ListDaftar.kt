@@ -47,5 +47,22 @@ fun ListDaftar(navController: NavController) {
             .fillMaxSize()
             .background(backgroundColor)
             .padding(top = 53.dp)
-    ) {}
+    ) {
+        // Bagian Header
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(headerPurple) // Warna ungu untuk header
+                .heightIn(min = 100.dp)
+                .padding(16.dp),
+            contentAlignment = Alignment.BottomStart
+        ) {
+            Text(
+                text = "List Daftar Peserta", // Judul header diubah
+                fontSize = 30.sp,
+                color = Color.White,
+                modifier = Modifier.padding(start = 10.dp)
+            )
+        }
+    }
 }
