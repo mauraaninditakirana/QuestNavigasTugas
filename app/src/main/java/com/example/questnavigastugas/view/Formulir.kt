@@ -69,99 +69,124 @@ fun Formulir(navController: NavController) {
             elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ){
-            Text(
-                text = "NAMA LENGKAP",
-                fontSize = 15.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.Gray,
-                modifier = Modifier.padding(bottom = 4.dp)
-            )
-            OutlinedTextField(
-                value = namaLengkap,
-                onValueChange = { namaLengkap = it },
-                label = { Text("Isian nama lengkap") },
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(8.dp),
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = darkPurple,
-                    unfocusedBorderColor = Color.Black,
-                ),
-                keyboardOptions = KeyboardOptions.Default.copy(
-                    imeAction = ImeAction.Next
-                ),
-                singleLine = true
-            )
+            Column(
+                modifier = Modifier
+                    .padding(16.dp)
+                    .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.Start
+            ) {
+                Text(
+                    text = "NAMA LENGKAP",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray,
+                    modifier = Modifier.padding(bottom = 4.dp)
+                )
+                OutlinedTextField(
+                    value = namaLengkap,
+                    onValueChange = { namaLengkap = it },
+                    label = { Text("Isian nama lengkap") },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(8.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = darkPurple,
+                        unfocusedBorderColor = Color.Black,
+                    ),
+                    keyboardOptions = KeyboardOptions.Default.copy(
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true
+                )
 
-            Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-            Text("JENIS KELAMIN", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Gray)
-            Column {
-                jenisKelaminOptions.forEach { option ->
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
-                    ) {
-                        RadioButton(
-                            selected = (jenisKelamin == option),
-                            onClick = { jenisKelamin = option },
-                            colors = RadioButtonDefaults.colors(selectedColor = darkPurple)
-                        )
-                        Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                Text(
+                    "JENIS KELAMIN",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray
+                )
+                Column {
+                    jenisKelaminOptions.forEach { option ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                        ) {
+                            RadioButton(
+                                selected = (jenisKelamin == option),
+                                onClick = { jenisKelamin = option },
+                                colors = RadioButtonDefaults.colors(selectedColor = darkPurple)
+                            )
+                            Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                        }
                     }
                 }
-            }
-            Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-            Text("STATUS PERKAWINAN", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Gray)
-            Column {
-                statusPerkawinanOptions.forEach { option ->
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
-                    ) {
-                        RadioButton(
-                            selected = (statusPerkawinan == option),
-                            onClick = { statusPerkawinan = option },
-                            colors = RadioButtonDefaults.colors(selectedColor = darkPurple)
-                        )
-                        Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                Text(
+                    "STATUS PERKAWINAN",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray
+                )
+                Column {
+                    statusPerkawinanOptions.forEach { option ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                        ) {
+                            RadioButton(
+                                selected = (statusPerkawinan == option),
+                                onClick = { statusPerkawinan = option },
+                                colors = RadioButtonDefaults.colors(selectedColor = darkPurple)
+                            )
+                            Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                        }
                     }
                 }
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Text(
+                    "ALAMAT",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray,
+                    modifier = Modifier.padding(bottom = 4.dp)
+                )
+                OutlinedTextField(
+                    value = alamat,
+                    onValueChange = { alamat = it },
+                    label = { Text("Alamat") },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(8.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = darkPurple,
+                        unfocusedBorderColor = Color.Black,
+                    ),
+                    keyboardOptions = KeyboardOptions.Default.copy(
+                        imeAction = ImeAction.Done
+                    ),
+                    singleLine = true
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+
+                Button(
+                    onClick = {
+                        navController.navigate(Routes.LIST_DAFTAR) {
+                            popUpTo(Routes.HALAMAN_AWAL)
+                        }
+                    },
+                    modifier = Modifier.fillMaxWidth().height(50.dp),
+                    shape = RoundedCornerShape(30.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000080)),
+                ) {
+                    Text(
+                        stringResource(R.string.submit),
+                        color = Color.White,
+                        fontSize = 18.sp
+                    )
+                }
             }
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Text("ALAMAT", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Gray, modifier = Modifier.padding(bottom = 4.dp))
-            OutlinedTextField(
-                value = alamat,
-                onValueChange = { alamat = it },
-                label = { Text("Alamat") },
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(8.dp),
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = darkPurple,
-                    unfocusedBorderColor = Color.Black,
-                ),
-                keyboardOptions = KeyboardOptions.Default.copy(
-                    imeAction = ImeAction.Done
-                ),
-                singleLine = true
-            )
-            Spacer(modifier = Modifier.height(32.dp))
-
-            Button(
-                onClick = {
-                    navController.navigate(Routes.LIST_DAFTAR) {
-                        popUpTo(Routes.HALAMAN_AWAL)
-                    }
-                },
-                modifier = Modifier.fillMaxWidth().height(50.dp),
-                shape = RoundedCornerShape(30.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000080)),
-            ){Text(
-                stringResource(R.string.submit),
-                color = Color.White,
-                fontSize = 18.sp
-            )}
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
