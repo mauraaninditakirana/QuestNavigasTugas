@@ -25,6 +25,13 @@ import com.example.QuestNavigasTugas.R
 import com.example.QuestNavigasTugas.Routes
 
 @Composable
-fun Formulir(navController: NavController) {}
+fun Formulir(navController: NavController) {
+    var namaLengkap by remember { mutableStateOf("") }
+    var jenisKelamin by remember { mutableStateOf("") }
+    val jenisKelaminOptions = listOf("Laki-laki", "Perempuan")
+    var statusPerkawinan by remember { mutableStateOf("") }
+    val statusPerkawinanOptions = listOf("Janda", "Lajang", "Duda")
+    var alamat by remember { mutableStateOf("") }
+}
 
 
