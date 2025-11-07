@@ -157,7 +157,11 @@ fun Formulir(navController: NavController) {
                 modifier = Modifier.fillMaxWidth().height(50.dp),
                 shape = RoundedCornerShape(30.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000080)),
-            ){}
+            ){Text(
+                stringResource(R.string.submit),
+                color = Color.White,
+                fontSize = 18.sp
+            )}
         }
     }
 }
