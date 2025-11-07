@@ -161,3 +161,9 @@ fun CustomButton(text: String, color: Color, textColor: Color, onClick: () -> Un
         Text(text = text, fontSize = 16.sp, color = textColor)
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun ListDaftarPreview() {
+    com.example.questnavigastugas.view.ListDaftar(navController = rememberNavController())
+}
