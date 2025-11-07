@@ -162,6 +162,7 @@ fun Formulir(navController: NavController) {
                 color = Color.White,
                 fontSize = 18.sp
             )}
+            Spacer(modifier = Modifier.height(16.dp))
         }
     }
 }
