@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.QuestNavigasTugas.R
-import com.example.QuestNavigasTugas.Routes
+import com.example.questnavigastugas.R
+import com.example.questnavigastugas.Routes
 
 @Composable
 fun Formulir(navController: NavController) {
@@ -91,6 +91,25 @@ fun Formulir(navController: NavController) {
                 ),
                 singleLine = true
             )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text("JENIS KELAMIN", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Gray)
+            Column {
+                jenisKelaminOptions.forEach { option ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                    ) {
+                        RadioButton(
+                            selected = (jenisKelamin == option),
+                            onClick = { jenisKelamin = option },
+                            colors = RadioButtonDefaults.colors(selectedColor = darkPurple)
+                        )
+                        Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                    }
+                }
+            }
         }
     }
 }
