@@ -135,7 +135,7 @@ fun InfoCard(label: String, value: String, backgroundColor: Color, labelColor: C
             Text(
                 text = label,
                 fontSize = 15.sp,
-                color = labelColor, // Menggunakan labelColor yang kini bisa ungu
+                color = labelColor,
                 fontWeight = FontWeight.Normal
             )
             Text(
@@ -145,5 +145,19 @@ fun InfoCard(label: String, value: String, backgroundColor: Color, labelColor: C
                 color = Color.Black
             )
         }
+    }
+}
+
+@Composable
+fun CustomButton(text: String, color: Color, textColor: Color, onClick: () -> Unit) {
+    Button(
+        onClick = onClick,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(50.dp),
+        shape = RoundedCornerShape(8.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = color)
+    ) {
+        Text(text = text, fontSize = 16.sp, color = textColor)
     }
 }
