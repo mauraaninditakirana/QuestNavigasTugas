@@ -37,5 +37,15 @@ fun HalamanAwal(navController: NavController) {
             .padding(32.dp), // Beri padding di sekeliling
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceAround // Beri jarak merata
-    ){}
+    ){
+        Spacer(modifier = Modifier.height(30.dp))
+        Text(
+            text = "Selamat Datang",
+            fontSize = 42.sp,
+            fontWeight = FontWeight.Bold,
+            fontFamily = FontFamily.Monospace,
+            color = textColor,
+            style = TextStyle(lineHeight = 56.sp)
+        )
+    }
 }
