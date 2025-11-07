@@ -7,3 +7,7 @@ Halaman Awal
 Halaman List Daftar Peserta
 
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/a23992ee-be98-40d2-95fc-348defbe11ac" />
+
+Halaman Formulir
+
+<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/41c8420b-522f-414d-accb-b6f25eac325d" />
