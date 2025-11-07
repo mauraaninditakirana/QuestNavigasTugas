@@ -166,5 +166,10 @@ fun Formulir(navController: NavController) {
         }
     }
 }
+@Preview(showBackground = true)
+@Composable
+fun FormulirBaruPreview() {
+    com.example.questnavigastugas.view.Formulir(navController = rememberNavController())
+}
 
 
