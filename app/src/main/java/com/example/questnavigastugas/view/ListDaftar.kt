@@ -105,6 +105,15 @@ fun ListDaftar(navController: NavController) {
             )
             Spacer(modifier = Modifier.height(40.dp))
 
+            CustomButton(text = "Beranda", color = buttonColor, textColor = buttonTextColor) {
+                navController.navigate("HalamanAwal")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            CustomButton(text = "Formulir Pendaftaran", color = buttonColor, textColor = buttonTextColor) {
+                navController.navigate("Formulir")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
         }
     }
 }
