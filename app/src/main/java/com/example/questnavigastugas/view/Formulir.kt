@@ -146,6 +146,18 @@ fun Formulir(navController: NavController) {
                 ),
                 singleLine = true
             )
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Button(
+                onClick = {
+                    navController.navigate(Routes.LIST_DAFTAR) {
+                        popUpTo(Routes.HALAMAN_AWAL)
+                    }
+                },
+                modifier = Modifier.fillMaxWidth().height(50.dp),
+                shape = RoundedCornerShape(30.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000080)),
+            ){}
         }
     }
 }
