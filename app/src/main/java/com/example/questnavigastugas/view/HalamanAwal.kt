@@ -66,5 +66,18 @@ fun HalamanAwal(navController: NavController) {
                 lineHeight = 24.sp
             )
         }
+        Button(
+            onClick = {
+                // 3. Aksi untuk navigasi ke halaman List Daftar
+                navController.navigate(Routes.LIST_DAFTAR)
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp),
+            shape = RoundedCornerShape(25.dp), // Membuat tombol oval
+            colors = ButtonDefaults.buttonColors(containerColor = buttonColor)
+        ){
+
+        }
     }
 }
