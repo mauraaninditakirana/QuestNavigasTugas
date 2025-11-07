@@ -30,3 +30,22 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.questnavigastugas.R
+
+@Composable
+fun ListDaftar(navController: NavController) {
+    val headerPurple = Color(0xFFDC26D3)
+    val backgroundColor = Color(0xFFDDD3E3)
+    val cardBackgroundColor = Color.White
+
+    val buttonColor = Color(0xFFDC26D3)
+    val textColor = Color(0xFF8E8E93)
+    val buttonTextColor = Color.White
+    val labelPurple = Color(0xFF900CBB)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(backgroundColor)
+            .padding(top = 53.dp)
+    ) {}
+}
