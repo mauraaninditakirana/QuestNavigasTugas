@@ -29,4 +29,13 @@ fun HalamanAwal(navController: NavController) {
     val backgroundColor = Color(0xFFF3E5F5)
     val textColor = Color(0xFF3F51B5)
     val buttonColor = Color(0xFF263A9A)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(backgroundColor)
+            .padding(32.dp), // Beri padding di sekeliling
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceAround // Beri jarak merata
+    ){}
 }
