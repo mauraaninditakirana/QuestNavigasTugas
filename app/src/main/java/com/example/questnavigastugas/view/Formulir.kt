@@ -32,6 +32,10 @@ fun Formulir(navController: NavController) {
     var statusPerkawinan by remember { mutableStateOf("") }
     val statusPerkawinanOptions = listOf("Janda", "Lajang", "Duda")
     var alamat by remember { mutableStateOf("") }
+
+    val lightPurple = Color(0xFFDC26D3)
+    val darkPurple = Color(0xFFD174D7)
+    val backgroundColor = Color(0xFFF7F2FA)
 }
 
 
