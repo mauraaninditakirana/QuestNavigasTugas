@@ -24,3 +24,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.questnavigastugas.R
 import com.example.questnavigastugas.Routes
 
+@Composable
+fun HalamanAwal(navController: NavController) {
+    val backgroundColor = Color(0xFFF3E5F5)
+    val textColor = Color(0xFF3F51B5)
+    val buttonColor = Color(0xFF263A9A)
+}
